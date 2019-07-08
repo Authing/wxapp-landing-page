@@ -24,8 +24,8 @@
           autoplay="autoplay"
           muted="muted"
           loop="loop"
-          height="250"
-          width="130"
+          height="200"
+          width="300"
           class="video_mini"
           src="https://img.linghegl.cn/unname.mp4"
         ></video>
@@ -92,7 +92,7 @@ export default {
   display: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   .pc {
     display: none !important;
   }

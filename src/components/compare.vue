@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" id="compare">
     <div class="titleBox">
       <span>客户案例</span>
       <div class="line"></div>
@@ -155,7 +155,7 @@ export default {
   font-size: 20px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   .compareBox {
     display: block !important;
     height: unset !important;
@@ -163,7 +163,7 @@ export default {
 
   .compareItem {
     width: 100%;
-    height: 40vh;
+    height: unset !important;
     margin-bottom: 22px !important;
     // margin: 0 1vw;
 

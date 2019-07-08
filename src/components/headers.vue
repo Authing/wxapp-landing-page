@@ -29,10 +29,10 @@
       </svg>
 
       <div class="linkBar">
-        <a class="h3" href="#product">主页</a>
-        <a class="h3" href="#">价格</a>
-        <a class="h3" href="#">部署</a>
-        <a class="h3" href="#">下载</a>
+        <a class="h3" href="#">主页</a>
+        <a class="h3" href="#product">演示</a>
+        <a class="h3" href="#compare">案例</a>
+        <a class="h3" href="#price">价格</a>
       </div>
     </div>
 
@@ -69,43 +69,44 @@
           <mu-icon value="menu" color="#fff"></mu-icon>
         </mu-button>
         <mu-list slot="content">
-          <mu-list-item button @click="hideMenu">
+          <mu-list-item button @click="goToIndex('welcome')">
             <mu-list-item-title>主页</mu-list-item-title>
           </mu-list-item>
-          <mu-list-item button>
+          <mu-list-item button @click="goToIndex('product')">
+            <mu-list-item-title>演示</mu-list-item-title>
+          </mu-list-item>
+          <mu-list-item button @click="goToIndex('compare')">
+            <mu-list-item-title>案例</mu-list-item-title>
+          </mu-list-item>
+          <mu-list-item button @click="goToIndex('price')">
             <mu-list-item-title>价格</mu-list-item-title>
-          </mu-list-item>
-          <mu-list-item button>
-            <mu-list-item-title>部署</mu-list-item-title>
-          </mu-list-item>
-          <mu-list-item button>
-            <mu-list-item-title>下载</mu-list-item-title>
           </mu-list-item>
         </mu-list>
       </mu-menu>
-
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "header",
+  name: "headers",
   data() {
     return {
-        menuOpened: false
+      menuOpened: false
     };
   },
 
   methods: {
-      hideMenu() {
-          this.menuOpened = false;
-      }
+    goToIndex(someid) {
+      document.getElementById(someid).scrollIntoView();
+      this.menuOpened = false;
+    }
   }
 };
 </script>
 <style>
-.headerPage, .headerPage-mini {
-    overflow: hidden;
+.headerPage,
+.headerPage-mini {
+  overflow: hidden;
 }
 
 .headerPage {
@@ -143,7 +144,7 @@ export default {
   min-width: 100px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   .headerPage {
     display: none !important;
   }
@@ -158,6 +159,6 @@ export default {
 }
 
 a.h3:hover {
-    color: rgb(255, 239, 185) !important;
+  color: rgb(255, 239, 185) !important;
 }
 </style>

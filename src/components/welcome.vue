@@ -1,5 +1,5 @@
 <template>
-  <div class="box box2 pages firstPage">
+  <div class="box box2 pages firstPage" id="welcome">
     <div>
       <div class="h1">Authing</div>
       <div class="h1">身份管家小程序</div>
@@ -25,11 +25,13 @@
 
 <script>
 // 初始化 Authing SDK for Web
+import { EventBus } from "./event-bus.js";
 const auth = new Authing({
-  clientId: "5d11dcc331f4173231ed6a8d",
+  clientId: "59f86b4832eb28071bdd9214", //5d11dcc331f4173231ed6a8d
   timestamp: Math.round(new Date() / 1000),
   nonce: Math.ceil(Math.random() * Math.pow(10, 6))
 });
+localStorage.removeItem("qrcode");
 
 auth.then(function(authing) {
   // 调用小程序扫码登录的方法，此方法将生成一个用于扫码登录的图片和相关提示信息
@@ -47,6 +49,13 @@ auth.then(function(authing) {
 
       // 存储 token 到 localStorage 中
       localStorage.setItem("token", userInfo.token);
+    },
+
+    onQRCodeLoad(qrcode) {
+      EventBus.$emit("getqrcode", {
+        qrcode: qrcode.qrcode
+      });
+      localStorage.setItem("qrcode", qrcode.qrcode);
     }
   });
 });
@@ -54,9 +63,9 @@ export default {
   name: "welcome",
   components: {},
   methods: {
-      readMore() {
-          document.getElementById("product").scrollIntoView();
-      }
+    readMore() {
+      document.getElementById("product").scrollIntoView();
+    }
   }
 };
 </script>
@@ -74,11 +83,12 @@ export default {
   padding-top: 15vh;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
   .firstPage {
     box-sizing: border-box;
     padding-top: 10vh;
-    max-height: 100vh !important;
+    max-height: unset !important;
+    height: unset !important;
   }
 
   #qrcode-node {
@@ -160,5 +170,4 @@ export default {
 .redButton {
   margin: 22px 0;
 }
-
 </style>
