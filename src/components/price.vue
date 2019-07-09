@@ -23,7 +23,7 @@
           <span class="no_line">享独立小程序端</span>
           <span class="no_line">一站式服务部署</span>
           <div class="buttonBar">
-            <a href="https://authing.cn">
+            <a href="https://authing.cn/login">
               <mu-button color="success">免费体验</mu-button>
             </a>
           </div>
@@ -47,7 +47,7 @@
           <span>享独立小程序端</span>
           <span>一站式服务部署</span>
           <div class="buttonBar">
-            <a href="https://authing.cn">
+            <a href="https://authing.cn/login">
               <mu-button color="success">免费体验</mu-button>
             </a>
           </div>

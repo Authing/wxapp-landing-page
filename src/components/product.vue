@@ -31,7 +31,7 @@
         ></video>
       </div>
       <div class="pc wow fadeIn" data-wow-duration="1.8s">
-        <img src="https://img.linghegl.cn/juzi.gif" class="pc_img" />
+        <img src="https://img.linghegl.cn/header_page.gif" class="pc_img" />
       </div>
     </div>
   </div>

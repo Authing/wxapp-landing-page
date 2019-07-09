@@ -1,8 +1,8 @@
 <template>
   <div class="box box2 pages firstPage" id="welcome">
     <div>
-      <div class="h1">Authing</div>
-      <div class="h1">身份管家小程序</div>
+      <div class="h1">小登录</div>
+      <div class="h1">微信小程序</div>
 
       <div class="h3 margin-top">
         扫一扫，
