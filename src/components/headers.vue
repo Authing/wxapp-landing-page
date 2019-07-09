@@ -127,7 +127,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 9;
 }
 
 .headerPage-mini {
@@ -143,7 +143,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 9;
 }
 
 .menu-style {
