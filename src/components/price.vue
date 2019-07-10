@@ -19,7 +19,7 @@
           <span>短信验证码</span>
           <span>发送验证邮件</span>
           <span>获取用户资料</span>
-          <span>获取用户手机号</span>
+          <span class="no_line">获取用户手机号</span>
           <span class="no_line">享独立小程序端</span>
           <span class="no_line">一站式服务部署</span>
           <div class="buttonBar">
@@ -46,20 +46,40 @@
           <span>获取用户手机号</span>
           <span>享独立小程序端</span>
           <span>一站式服务部署</span>
-          <div class="buttonBar">
-            <a href="https://authing.cn/login">
-              <mu-button color="success">免费体验</mu-button>
+          <div class="buttonBar isPC">
+            <mu-button color="primary" @click="showAlert">联系我们</mu-button>
+          </div>
+
+          <div class="buttonBar isPhone">
+            <a href="tel: 18000179176">
+              <mu-button color="success">联系我们</mu-button>
             </a>
           </div>
         </div>
       </div>
     </div>
+    <mu-dialog title="联系我们" width="360" :open.sync="dialogShow">
+      <div>联系电话：18000179176</div>
+      <div>邮件请投：services@authing.cn</div>
+      <div>服务时间：周一至周日 9:00 - 21:00</div>
+      <mu-button slot="actions" flat color="primary" @click="showAlert()">好的</mu-button>
+    </mu-dialog>
   </div>
 </template>
 <script>
 export default {
   name: "price",
-  components: {}
+  components: {},
+  data() {
+    return {
+      dialogShow: false
+    };
+  },
+  methods: {
+    showAlert() {
+      this.dialogShow = !this.dialogShow;
+    }
+  }
 };
 </script>
 

@@ -20,6 +20,26 @@
     <div id="qrcode-node" class="shakeBox">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </div>
+
+    <mu-dialog title="联系我们" width="480" :open.sync="listShow">
+      <mu-container>
+        <mu-paper :z-depth="1">
+          <mu-data-table
+            :columns="columns"
+            :sort.sync="sort"
+            @sort-change="handleSortChange"
+            :data="listData"
+            max-height="400"
+          >
+            <template slot-scope="scope">
+              <td>{{scope.row.key}}</td>
+              <td class="is-right">{{scope.row.value}}</td>
+            </template>
+          </mu-data-table>
+        </mu-paper>
+      </mu-container>
+      <mu-button slot="actions" flat color="primary" @click="showAlert()">好的</mu-button>
+    </mu-dialog>
   </div>
 </template>
 
@@ -33,39 +53,67 @@ const auth = new Authing({
 });
 localStorage.removeItem("qrcode");
 
-auth.then(function(authing) {
-  // 调用小程序扫码登录的方法，此方法将生成一个用于扫码登录的图片和相关提示信息
-  authing.startWXAppScaning({
-    mount: "qrcode-node",
-    tips: " ",
-    // 不自动跳转
-    redirect: false,
-
-    // 扫码成功
-    onSuccess(userInfo) {
-      alert("扫码成功，请打开控制台查看用户信息");
-
-      console.log(userInfo);
-
-      // 存储 token 到 localStorage 中
-      localStorage.setItem("token", userInfo.token);
-    },
-
-    onQRCodeLoad(qrcode) {
-      EventBus.$emit("getqrcode", {
-        qrcode: qrcode.qrcode
-      });
-      localStorage.setItem("qrcode", qrcode.qrcode);
-    }
-  });
-});
 export default {
   name: "welcome",
   components: {},
+
+  data() {
+    return {
+      listShow: false,
+      listData: [],
+      columns: [
+        { title: "key", width: 110, name: "key" },
+        { title: "value", name: "value", width: 270 }
+      ]
+    };
+  },
   methods: {
     readMore() {
       document.getElementById("product").scrollIntoView();
+    },
+    showAlert() {
+      this.listShow = !this.listShow;
     }
+  },
+
+  mounted() {
+    let that = this;
+    auth.then(function(authing) {
+      // 调用小程序扫码登录的方法，此方法将生成一个用于扫码登录的图片和相关提示信息
+      authing.startWXAppScaning({
+        mount: "qrcode-node",
+        tips: " ",
+        // 不自动跳转
+        redirect: false,
+
+        // 扫码成功
+        onSuccess(userInfo) {
+          let data = userInfo.data;
+          let arr = [];
+          for (var key in data) {
+            arr.push({
+              key: key,
+              value: data[key]
+            });
+          }
+          that.listData = arr;
+          console.log(arr);
+          that.listShow = true;
+          //alert(`扫码成功! \n 用户名：${userInfo.data.nickname} \n 登录IP：${userInfo.data.lastIP} \n `);
+          console.log(userInfo);
+
+          // 存储 token 到 localStorage 中
+          localStorage.setItem("token", userInfo.token);
+        },
+
+        onQRCodeLoad(qrcode) {
+          EventBus.$emit("getqrcode", {
+            qrcode: qrcode.qrcode
+          });
+          localStorage.setItem("qrcode", qrcode.qrcode);
+        }
+      });
+    });
   }
 };
 </script>
@@ -86,7 +134,7 @@ export default {
 @media screen and (max-width: 1024px) {
   .firstPage {
     box-sizing: border-box;
-    padding-top: 10vh;
+    padding-top: 15vh;
     max-height: unset !important;
     height: unset !important;
   }

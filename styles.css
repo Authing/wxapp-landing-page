@@ -125,3 +125,25 @@ div, span {
     background: #f3f3f3c5;
     margin-top: 4px;
 }
+
+.isPC {
+    display: inherit;
+}
+  
+.isPhone {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .miniLink {
+      font-size: 9px !important;
+    }
+  
+    .isPC {
+      display: none !important;
+    }
+  
+    .isPhone {
+      display: inherit !important;
+    }
+  }

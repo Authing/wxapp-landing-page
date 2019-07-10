@@ -27,6 +27,8 @@
           height="200"
           width="300"
           class="video_mini"
+          playsinline="false"
+          webkit-playsinline="false"
           src="https://img.linghegl.cn/unname.mp4"
         ></video>
       </div>
