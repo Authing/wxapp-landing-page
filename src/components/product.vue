@@ -20,7 +20,7 @@
         width="286"-->
       </div>
       <div class="mini_video">
-        <video
+        <!-- <video
           autoplay="autoplay"
           muted="muted"
           loop="loop"
@@ -30,7 +30,8 @@
           playsinline="false"
           webkit-playsinline="false"
           src="https://img.linghegl.cn/unname.mp4"
-        ></video>
+        ></video> -->
+        <img class="product_gif" src="https://img.linghegl.cn/product.gif">
       </div>
       <div class="pc wow fadeIn" data-wow-duration="1.8s">
         <img src="https://img.linghegl.cn/header.gif" class="pc_img" />
@@ -126,6 +127,11 @@ export default {
 
   .mini_video {
     display: block !important;
+  }
+
+  .product_gif {
+    height: 550px;
+    width: 286px;
   }
 }
 </style>

@@ -28,7 +28,7 @@
         </div>
         <img class="avatar" src="https://img.linghegl.cn/juzi.png" />
         <div class="content">
-          <span>作为一家聊天机器人公司，Authing 小登录小程序使我们一年的短信费率降低了至少 50%，它简化了登录流程，很好地解决了短信API被盗刷的问题。</span>
+          <span>作为一家聊天机器人公司，Authing 小登录小程序使我们一年的短信费率降低了至少 50%，它简化了登录流程，很好地解决了短信 API 被盗刷的问题。</span>
           <div class="companyName">—— 句子互动</div>
         </div>
       </div>

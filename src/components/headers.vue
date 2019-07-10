@@ -132,7 +132,7 @@ export default {
 
 .headerPage-mini {
   width: 100vw;
-  height: 10vh;
+  height: 15vh;
   background: rgba(51, 51, 51, 0.6);
 
   display: none;

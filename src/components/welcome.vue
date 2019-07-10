@@ -21,7 +21,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </div>
 
-    <mu-dialog title="联系我们" width="480" :open.sync="listShow">
+    <mu-dialog title="登录成功，以下是您的个人信息" width="480" :open.sync="listShow">
       <mu-container>
         <mu-paper :z-depth="1">
           <mu-data-table
@@ -38,7 +38,10 @@
           </mu-data-table>
         </mu-paper>
       </mu-container>
-      <mu-button slot="actions" flat color="primary" @click="showAlert()">好的</mu-button>
+      <a href="https://docs.authing.cn/authing/advanced/wxapp-qrcode" slot="actions">
+        <mu-button flat color="primary">查看接入文档</mu-button>
+      </a>
+      <mu-button slot="actions" flat color="primary" @click="showAlert()">关闭</mu-button>
     </mu-dialog>
   </div>
 </template>
@@ -47,9 +50,10 @@
 // 初始化 Authing SDK for Web
 import { EventBus } from "./event-bus.js";
 const auth = new Authing({
-  clientId: "59f86b4832eb28071bdd9214", //5d11dcc331f4173231ed6a8d
+  clientId: "5d1eeec1ec626c2abb803a24", //5d11dcc331f4173231ed6a8d
   timestamp: Math.round(new Date() / 1000),
-  nonce: Math.ceil(Math.random() * Math.pow(10, 6))
+  nonce: Math.ceil(Math.random() * Math.pow(10, 6)),
+  useSelfWxapp: true
 });
 localStorage.removeItem("qrcode");
 
@@ -134,7 +138,7 @@ export default {
 @media screen and (max-width: 1024px) {
   .firstPage {
     box-sizing: border-box;
-    padding-top: 15vh;
+    padding-top: 20vh !important;
     max-height: unset !important;
     height: unset !important;
   }

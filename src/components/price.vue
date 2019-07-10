@@ -12,7 +12,7 @@
           <div class="priceFee">¥ 0.00</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">基础版</div>
+          <div class="priceType">8000 次（免费）</div>
           <span>Authing 控制台</span>
           <span>多个用户池</span>
           <span>第三方登录</span>
@@ -32,11 +32,11 @@
 
       <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
         <div class="priceHeader">
-          <mu-icon size="64" value="shopping_basket" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 2388.00 / 年</div>
+          <mu-icon size="64" value="local_mall" color="#ccab77"></mu-icon>
+          <div class="priceFee">¥ 130</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">会员版</div>
+          <div class="priceType">2 万次（0.0065 元/次）</div>
           <span>Authing 控制台</span>
           <span>多个用户池</span>
           <span>第三方登录</span>
@@ -52,12 +52,69 @@
 
           <div class="buttonBar isPhone">
             <a href="tel: 18000179176">
-              <mu-button color="success">联系我们</mu-button>
+              <mu-button color="primary">联系我们</mu-button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
+        <div class="priceHeader">
+          <mu-icon size="64" value="dashboard" color="#ccab77"></mu-icon>
+          <div class="priceFee">¥ 1200</div>
+        </div>
+        <div class="priceInfo">
+          <div class="priceType">20 万次（0.0062 元/次）</div>
+          <span>Authing 控制台</span>
+          <span>多个用户池</span>
+          <span>第三方登录</span>
+          <span>短信验证码</span>
+          <span>发送验证邮件</span>
+          <span>获取用户资料</span>
+          <span>获取用户手机号</span>
+          <span>享独立小程序端</span>
+          <span>支持私有&专有云部署</span>
+          <div class="buttonBar isPC">
+            <mu-button color="primary" @click="showAlert">联系我们</mu-button>
+          </div>
+
+          <div class="buttonBar isPhone">
+            <a href="tel: 18000179176">
+              <mu-button color="primary">联系我们</mu-button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
+        <div class="priceHeader">
+          <mu-icon size="64" value="cloud" color="#ccab77"></mu-icon>
+          <div class="priceFee">¥ 3000</div>
+        </div>
+        <div class="priceInfo">
+          <div class="priceType">50 万次（0.006 元/次）</div>
+          <span>Authing 控制台</span>
+          <span>多个用户池</span>
+          <span>第三方登录</span>
+          <span>短信验证码</span>
+          <span>发送验证邮件</span>
+          <span>获取用户资料</span>
+          <span>获取用户手机号</span>
+          <span>享独立小程序端</span>
+          <span>支持私有&专有云部署</span>
+          <div class="buttonBar isPC">
+            <mu-button color="primary" @click="showAlert">联系我们</mu-button>
+          </div>
+
+          <div class="buttonBar isPhone">
+            <a href="tel: 18000179176">
+              <mu-button color="primary">联系我们</mu-button>
             </a>
           </div>
         </div>
       </div>
     </div>
+
     <mu-dialog title="联系我们" width="360" :open.sync="dialogShow">
       <div>联系电话：18000179176</div>
       <div>邮件请投：services@authing.cn</div>
@@ -102,7 +159,7 @@ export default {
 .priceItem {
   width: calc(50% - 40px);
   height: 75vh;
-  border-radius: 22px;
+  border-radius: 16px;
   margin: 10px;
   border: 6px solid #f3f3f3;
   // box-shadow: -4px 7px 46px 2px rgba(194, 194, 194, 0.1);
