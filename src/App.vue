@@ -24,4 +24,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a[title="站长统计"] {
+  display: none;
+}
 </style>
