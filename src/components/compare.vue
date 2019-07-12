@@ -83,10 +83,10 @@
             />
           </svg>
         </div>
-        <img class="avatar" src="https://img.linghegl.cn/wandian.gif" />
+        <img class="avatar" src="https://usercontents.authing.cn/wxapp/memect.pngmemect.gif" />
         <div class="content">
-          <span>Authing 使我们的开发人员能够更轻松地完成复杂的工作。接入小程序端后，我们能平滑地渡过初创阶段，快速积累用户量，管理和分析用户数据。</span>
-          <div class="companyName">—— 玩店</div>
+          <span>Authing 使我们在部署应用时无需考虑用户系统，快速保证了我们对外业务的安全性，同时还能控制访问的用户，便于分析用户画像，减轻了我们不小负担。</span>
+          <div class="companyName">—— 文因互联</div>
         </div>
       </div>
     </div>
