@@ -1,7 +1,7 @@
 <template>
   <div class="box box2 pages firstPage" id="welcome">
     <div>
-      <div class="h1">小登录</div>
+      <div class="h1 goLeft">「小登录」</div>
       <div class="h1">微信小程序</div>
 
       <div class="h3 margin-top">
@@ -38,7 +38,7 @@
           </mu-data-table>
         </mu-paper>
       </mu-container>
-      <a href="https://docs.authing.cn/authing/advanced/wxapp-qrcode" slot="actions">
+      <a target="_blank" href="https://docs.authing.cn/authing/advanced/wxapp-qrcode" slot="actions">
         <mu-button flat color="primary">查看接入文档</mu-button>
       </a>
       <mu-button slot="actions" flat color="primary" @click="showAlert()">关闭</mu-button>
@@ -133,6 +133,10 @@ export default {
 
 .firstPage {
   padding-top: 15vh;
+}
+
+.goLeft {
+    transform: translate(-25px, 0px);
 }
 
 @media screen and (max-width: 1024px) {
