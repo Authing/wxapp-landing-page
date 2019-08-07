@@ -53,7 +53,8 @@ const auth = new Authing({
   clientId: "5d1eeec1ec626c2abb803a24", //5d11dcc331f4173231ed6a8d
   timestamp: Math.round(new Date() / 1000),
   nonce: Math.ceil(Math.random() * Math.pow(10, 6)),
-  useSelfWxapp: true
+  useSelfWxapp: true,
+  noSecurityChecking: true,
 });
 localStorage.removeItem("qrcode");
 
@@ -82,9 +83,9 @@ export default {
 
   mounted() {
     let that = this;
-    auth.then(function(authing) {
+    //auth.then(function(authing) {
       // 调用小程序扫码登录的方法，此方法将生成一个用于扫码登录的图片和相关提示信息
-      authing.startWXAppScaning({
+      auth.startWXAppScaning({
         mount: "qrcode-node",
         tips: " ",
         // 不自动跳转
@@ -117,7 +118,7 @@ export default {
           localStorage.setItem("qrcode", qrcode.qrcode);
         }
       });
-    });
+    //});
   }
 };
 </script>

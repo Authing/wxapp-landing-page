@@ -19,7 +19,7 @@
           <span>短信验证码</span>
           <span>发送验证邮件</span>
           <span>获取用户资料</span>
-          <span class="no_line">获取用户手机号</span>
+          <span>获取用户手机号</span>
           <span class="no_line">享独立小程序端</span>
           <span class="no_line">一站式服务部署</span>
           <div class="buttonBar">
