@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import indexPage from '@/components/index'
+//import settingsPage from '@/components/settings'
 import MuseUI from 'muse-ui';
 //import Message from 'muse-ui-message';
 import '../../muse-ui.css';
@@ -15,7 +16,13 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: indexPage
+      component: () => import('@/components/index')
+    },
+    {
+      path: '/settings',
+      name: 'Settings',
+      component: () => import('@/components/settings')
     }
-  ]
+  ],
+  mode: 'history',
 })

@@ -32,11 +32,39 @@
 
       <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
         <div class="priceHeader">
-          <mu-icon size="64" value="local_mall" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 130</div>
+          <mu-icon size="64" value="build" color="#ccab77"></mu-icon>
+          <div class="priceFee">¥ 399</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">2 万次（0.0065 元/次）</div>
+          <div class="priceType">专人部署服务</div>
+          <span>协同开发</span>
+          <span>新功能迭代</span>
+          <span>企业级定制</span>
+          <span>Git 仓库共享</span>
+          <span>支持二次开发</span>
+          <span>专业知识解答</span>
+          <span>一对一技术对接</span>
+          <span>享独立小程序端</span>
+          <span>提供私有&专有云部署</span>
+          <div class="buttonBar isPC">
+            <mu-button color="primary" @click="showAlert">联系我们</mu-button>
+          </div>
+
+          <div class="buttonBar isPhone">
+            <a href="tel: 18000179176">
+              <mu-button color="primary">联系我们</mu-button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
+        <div class="priceHeader">
+          <mu-icon size="64" value="local_mall" color="#ccab77"></mu-icon>
+          <div class="priceFee">¥ 390</div>
+        </div>
+        <div class="priceInfo">
+          <div class="priceType">2 万次（0.0195 元/次）</div>
           <span>Authing 控制台</span>
           <span>多个用户池</span>
           <span>第三方登录</span>
@@ -61,10 +89,10 @@
       <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
         <div class="priceHeader">
           <mu-icon size="64" value="dashboard" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 1200</div>
+          <div class="priceFee">¥ 3600</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">20 万次（0.0062 元/次）</div>
+          <div class="priceType">20 万次（0.018 元/次）</div>
           <span>Authing 控制台</span>
           <span>多个用户池</span>
           <span>第三方登录</span>
@@ -89,10 +117,10 @@
       <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
         <div class="priceHeader">
           <mu-icon size="64" value="cloud" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 3000</div>
+          <div class="priceFee">¥ 9000</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">50 万次（0.006 元/次）</div>
+          <div class="priceType">50 万次（0.018 元/次）</div>
           <span>Authing 控制台</span>
           <span>多个用户池</span>
           <span>第三方登录</span>
@@ -145,19 +173,19 @@ export default {
   background: #fff;
   width: 100vw;
   min-height: 400px;
-  max-height: 120vh;
 }
 
 .priceBar {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .priceItem {
-  width: calc(50% - 40px);
+  width: calc(100% / 3 - 20px);
   height: 75vh;
   border-radius: 16px;
   margin: 10px;
@@ -230,6 +258,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .priceItem {

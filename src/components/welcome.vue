@@ -26,8 +26,6 @@
         <mu-paper :z-depth="1">
           <mu-data-table
             :columns="columns"
-            :sort.sync="sort"
-            @sort-change="handleSortChange"
             :data="listData"
             max-height="400"
           >
