@@ -15,7 +15,7 @@
     </div>
 
     <div v-if="!isWX" class="qrcodeBox">
-      <img src="https://usercontents.authing.cn/qrcode_for_authing.jpg" class="bottomQRCode" />
+      <img src="https://usercontents.authing.cn/qrcode_for_steamory.jgp" class="bottomQRCode" />
     </div>
 
     <div class="copyrightBar">
