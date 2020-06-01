@@ -36,7 +36,7 @@
           </mu-data-table>
         </mu-paper>
       </mu-container>
-      <a target="_blank" href="https://docs.authing.cn/authing/advanced/wxapp-qrcode" slot="actions">
+      <a target="_blank" href="https://docs.authing.cn/authing/scan-qrcode/wxapp-qrcode" slot="actions">
         <mu-button flat color="primary">查看接入文档</mu-button>
       </a>
       <mu-button slot="actions" flat color="primary" @click="showAlert()">关闭</mu-button>
