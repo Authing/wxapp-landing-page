@@ -33,7 +33,7 @@
         <a class="h3" href="#product">演示</a>
         <a class="h3" href="#compare">案例</a>
         <a class="h3" href="#price">价格</a>
-        <a class="h3"  target="_blank" href="https://docs.authing.cn/authing/advanced/wxapp-qrcode">文档</a>
+        <a class="h3"  target="_blank" href="https://docs.authing.cn/authing/scan-qrcode/wxapp-qrcode">文档</a>
       </div>
     </div>
 
@@ -82,7 +82,7 @@
           <mu-list-item button @click="goToIndex('price')">
             <mu-list-item-title>价格</mu-list-item-title>
           </mu-list-item>
-          <a target="_blank" href="https://docs.authing.cn/authing/advanced/wxapp-qrcode">
+          <a target="_blank" href="https://docs.authing.cn/authing/scan-qrcode/wxapp-qrcode">
             <mu-list-item button>
               <mu-list-item-title>文档</mu-list-item-title>
             </mu-list-item>
