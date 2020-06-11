@@ -17,8 +17,11 @@
       </div>
     </div>
 
-    <div id="qrcode-node" class="shakeBox">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <div class="shakeBox">
+      <div id="qrcode-node">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </div>
+      <div v-if="qrcodeLoaded" class="scan-tips">用微信扫扫看</div>
     </div>
 
     <mu-dialog title="登录成功，以下是您的个人信息" width="480" :open.sync="listShow">
@@ -67,7 +70,8 @@ export default {
       columns: [
         { title: "key", width: 110, name: "key" },
         { title: "value", name: "value", width: 270 }
-      ]
+      ],
+      qrcodeLoaded: false
     };
   },
   methods: {
@@ -113,7 +117,8 @@ export default {
         localStorage.setItem("token", userInfo.token);
       },
 
-      onQRCodeLoad(qrcode) {
+      onQRCodeLoad: qrcode => {
+        this.qrcodeLoaded = true;
         EventBus.$emit("getqrcode", {
           qrcode: qrcode.qrcode
         });
@@ -166,7 +171,8 @@ export default {
   margin-top: 20px;
 }
 
-#qrcode-node {
+.shakeBox {
+  /* qrcode-node */
   box-sizing: border-box;
   min-width: 300px;
   min-height: 300px;
@@ -174,6 +180,12 @@ export default {
   background: #fff;
   border-radius: 8px;
   box-shadow: -4px 7px 46px 2px rgba(194, 194, 194, 0.1);
+}
+
+.shakeBox .scan-tips {
+  width: 100%;
+  margin-top: 8px;
+  text-align: center;
 }
 
 #authing__spinner {

@@ -13,8 +13,12 @@
         </div>
         <div class="priceInfo">
           <div class="priceType">0.05 元/次，总价 150 元</div>
-          <div class="buttonBar">
-            <a href="https://authing.cn/login">
+          <div class="buttonBar isPC">
+            <mu-button color="success" @click="showAlert">限时免费</mu-button>
+          </div>
+
+          <div class="buttonBar isPhone">
+            <a href="tel: 17602502507">
               <mu-button color="success">限时免费</mu-button>
             </a>
           </div>
@@ -33,7 +37,7 @@
           </div>
 
           <div class="buttonBar isPhone">
-            <a href="tel: 18000179176">
+            <a href="tel: 17602502507">
               <mu-button color="primary">联系我们</mu-button>
             </a>
           </div>
@@ -52,7 +56,7 @@
           </div>
 
           <div class="buttonBar isPhone">
-            <a href="tel: 18000179176">
+            <a href="tel: 17602502507">
               <mu-button color="primary">联系我们</mu-button>
             </a>
           </div>
@@ -61,7 +65,7 @@
     </div>
     <!-- 
     <mu-dialog title="联系我们" width="360" :open.sync="dialogShow">
-      <div>联系电话：18000179176</div>
+      <div>联系电话：17602502507</div>
       <div>邮件请投：services@authing.cn</div>
       <div>服务时间：周一至周日 9:00 - 21:00</div>
       <mu-button slot="actions" flat color="primary" @click="showAlert()">好的</mu-button>

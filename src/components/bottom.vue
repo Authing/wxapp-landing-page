@@ -21,7 +21,7 @@
     <div class="copyrightBar">
       <a class="miniLink" href="https://authing.cn">Copyright © 北京蒸汽记忆科技有限公司</a>
       <a class="miniLink isPC" @click="showAlert()">联系我们</a>
-      <a class="miniLink isPhone" href="tel: 18000179176">联系我们</a>
+      <a class="miniLink isPhone" href="tel: 17602502507">联系我们</a>
 
       <a class="miniLink" href="https://www.miibeian.gov.cn">ICP备案：京ICP备16006636号-2</a>
     </div>
@@ -30,7 +30,10 @@
         <img src="https://usercontents.authing.cn//20200417223041.png" />
 
         <div class="info">
-          <div>电话：17602502507</div>
+          <div>
+            电话：
+            <a href="tel: 17602502507" style="color: #4ca8eb;">17602502507</a>
+          </div>
           <div>邮件：xuziqiang@authing.cn</div>
           <div>或使用微信扫一扫左侧二维码</div>
         </div>
@@ -53,20 +56,7 @@ export default {
       dialogShow: false
     };
   },
-  created() {
-    //console.log(this.isWX)
-    // let that = this;
-    // let qrcode;
-    // let time = setTimeout(() => {
-    //   qrcode = localStorage.getItem("qrcode");
-    //   if (qrcode) {
-    //     that.qrcode = qrcode;
-    //     //alert(that.qrcode)
-    //     console.log(that.qrcode);
-    //   }
-    //   //clearTimeout(time);
-    // }, 100);
-  },
+  created() {},
   mounted() {
     EventBus.$on("getqrcode", ({ qrcode }) => {
       this.qrcode = qrcode;
