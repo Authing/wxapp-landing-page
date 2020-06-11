@@ -9,22 +9,13 @@
       <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
         <div class="priceHeader">
           <mu-icon size="64" value="opacity" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 0.00</div>
+          <div class="priceFee">号码认证次数 3000 次套餐包</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">8000 次（免费）</div>
-          <span>Authing 控制台</span>
-          <span>多个用户池</span>
-          <span>第三方登录</span>
-          <span>短信验证码</span>
-          <span>发送验证邮件</span>
-          <span>获取用户资料</span>
-          <span>获取用户手机号</span>
-          <span class="no_line">享独立小程序端</span>
-          <span class="no_line">一站式服务部署</span>
+          <div class="priceType">0.05 元/次，总价 150 元</div>
           <div class="buttonBar">
             <a href="https://authing.cn/login">
-              <mu-button color="success">免费体验</mu-button>
+              <mu-button color="success">限时免费</mu-button>
             </a>
           </div>
         </div>
@@ -33,19 +24,10 @@
       <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
         <div class="priceHeader">
           <mu-icon size="64" value="build" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 399</div>
+          <div class="priceFee">号码认证 72000 次套餐包</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">专人部署服务</div>
-          <span>协同开发</span>
-          <span>新功能迭代</span>
-          <span>企业级定制</span>
-          <span>Git 仓库共享</span>
-          <span>支持二次开发</span>
-          <span>专业知识解答</span>
-          <span>一对一技术对接</span>
-          <span>享独立小程序端</span>
-          <span>提供私有&专有云部署</span>
+          <div class="priceType">0.035 元/次，总价 2520 元</div>
           <div class="buttonBar isPC">
             <mu-button color="primary" @click="showAlert">联系我们</mu-button>
           </div>
@@ -61,75 +43,10 @@
       <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
         <div class="priceHeader">
           <mu-icon size="64" value="local_mall" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 390</div>
+          <div class="priceFee">号码认证 450000 次套餐包</div>
         </div>
         <div class="priceInfo">
-          <div class="priceType">2 万次（0.0195 元/次）</div>
-          <span>Authing 控制台</span>
-          <span>多个用户池</span>
-          <span>第三方登录</span>
-          <span>短信验证码</span>
-          <span>发送验证邮件</span>
-          <span>获取用户资料</span>
-          <span>获取用户手机号</span>
-          <span class="no_line">享独立小程序端</span>
-          <span class="no_line">一站式服务部署</span>
-          <div class="buttonBar isPC">
-            <mu-button color="primary" @click="showAlert">联系我们</mu-button>
-          </div>
-
-          <div class="buttonBar isPhone">
-            <a href="tel: 18000179176">
-              <mu-button color="primary">联系我们</mu-button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
-        <div class="priceHeader">
-          <mu-icon size="64" value="dashboard" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 3600</div>
-        </div>
-        <div class="priceInfo">
-          <div class="priceType">20 万次（0.018 元/次）</div>
-          <span>Authing 控制台</span>
-          <span>多个用户池</span>
-          <span>第三方登录</span>
-          <span>短信验证码</span>
-          <span>发送验证邮件</span>
-          <span>获取用户资料</span>
-          <span>获取用户手机号</span>
-          <span>享独立小程序端</span>
-          <span>支持私有&专有云部署</span>
-          <div class="buttonBar isPC">
-            <mu-button color="primary" @click="showAlert">联系我们</mu-button>
-          </div>
-
-          <div class="buttonBar isPhone">
-            <a href="tel: 18000179176">
-              <mu-button color="primary">联系我们</mu-button>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="priceItem wow fadeIn" data-wow-duration="1.8s">
-        <div class="priceHeader">
-          <mu-icon size="64" value="cloud" color="#ccab77"></mu-icon>
-          <div class="priceFee">¥ 9000</div>
-        </div>
-        <div class="priceInfo">
-          <div class="priceType">50 万次（0.018 元/次）</div>
-          <span>Authing 控制台</span>
-          <span>多个用户池</span>
-          <span>第三方登录</span>
-          <span>短信验证码</span>
-          <span>发送验证邮件</span>
-          <span>获取用户资料</span>
-          <span>获取用户手机号</span>
-          <span>享独立小程序端</span>
-          <span>支持私有&专有云部署</span>
+          <div class="priceType">0.03 元/次，总价 13500 元</div>
           <div class="buttonBar isPC">
             <mu-button color="primary" @click="showAlert">联系我们</mu-button>
           </div>
@@ -142,16 +59,18 @@
         </div>
       </div>
     </div>
-
+    <!-- 
     <mu-dialog title="联系我们" width="360" :open.sync="dialogShow">
       <div>联系电话：18000179176</div>
       <div>邮件请投：services@authing.cn</div>
       <div>服务时间：周一至周日 9:00 - 21:00</div>
       <mu-button slot="actions" flat color="primary" @click="showAlert()">好的</mu-button>
-    </mu-dialog>
+    </mu-dialog>-->
   </div>
 </template>
 <script>
+import { EventBus } from "./event-bus.js";
+
 export default {
   name: "price",
   components: {},
@@ -162,7 +81,7 @@ export default {
   },
   methods: {
     showAlert() {
-      this.dialogShow = !this.dialogShow;
+      EventBus.$emit("showconcat", {});
     }
   }
 };
@@ -186,10 +105,11 @@ export default {
 
 .priceItem {
   width: calc(100% / 3 - 20px);
-  height: 75vh;
+  // height: 75vh;
   border-radius: 16px;
   margin: 10px;
   border: 6px solid #f3f3f3;
+  padding-bottom: 11px;
   // box-shadow: -4px 7px 46px 2px rgba(194, 194, 194, 0.1);
 }
 
@@ -212,7 +132,7 @@ export default {
 }
 
 .priceFee {
-  font-size: 24px;
+  font-size: 16px;
   margin-top: 11px;
 }
 
@@ -233,13 +153,13 @@ export default {
 }
 
 .buttonBar {
-  margin-top: 11px;
+  margin-top: 18px;
 }
 
 .priceType {
   color: #ccab77;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 span {
@@ -263,7 +183,7 @@ span {
 
   .priceItem {
     width: calc(100% - 20px);
-    height: 500px;
+    // height: 500px;
     border-radius: 22px;
     border: 6px solid #f3f3f3;
     margin: 10px 0;

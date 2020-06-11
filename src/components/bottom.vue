@@ -5,8 +5,8 @@
       <div class="line"></div>
     </div>
 
-    <div v-if="!isWX" class="titleBox2">
-      <span>关注我们</span>
+    <!-- <div v-if="!isWX" class="titleBox2">
+      <span>联系销售</span>
       <div class="line"></div>
     </div>
 
@@ -15,21 +15,28 @@
     </div>
 
     <div v-if="!isWX" class="qrcodeBox">
-      <img src="https://usercontents.authing.cn/qrcode_for_steamory.jgp" class="bottomQRCode" />
-    </div>
+      <img src="https://usercontents.authing.cn//20200417223041.png" class="bottomQRCode" />
+    </div>-->
 
     <div class="copyrightBar">
-      <a class="miniLink" href="https://authing.cn">Copyright © 2019 Authing, Inc.</a>
+      <a class="miniLink" href="https://authing.cn">Copyright © 北京蒸汽记忆科技有限公司</a>
       <a class="miniLink isPC" @click="showAlert()">联系我们</a>
       <a class="miniLink isPhone" href="tel: 18000179176">联系我们</a>
 
       <a class="miniLink" href="https://www.miibeian.gov.cn">ICP备案：京ICP备16006636号-2</a>
     </div>
     <mu-dialog title="联系我们" width="360" :open.sync="dialogShow">
-      <div>联系电话：18000179176</div>
-      <div>邮件请投：services@authing.cn</div>
-      <div>服务时间：周一至周日 9:00 - 21:00</div>
-      <mu-button slot="actions" flat color="primary" @click="showAlert()">好的</mu-button>
+      <div class="concat-bar">
+        <img src="https://usercontents.authing.cn//20200417223041.png" />
+
+        <div class="info">
+          <div>电话：17602502507</div>
+          <div>邮件：xuziqiang@authing.cn</div>
+          <div>或使用微信扫一扫左侧二维码</div>
+        </div>
+      </div>
+
+      <mu-button slot="actions" flat color="primary" @click="showAlert()">关闭</mu-button>
     </mu-dialog>
   </div>
 </template>
@@ -64,6 +71,10 @@ export default {
     EventBus.$on("getqrcode", ({ qrcode }) => {
       this.qrcode = qrcode;
     });
+
+    EventBus.$on("showconcat", () => {
+      this.dialogShow = true;
+    });
   },
   methods: {
     showAlert() {
@@ -84,8 +95,9 @@ export default {
 
 .bottomPage {
   width: 100vw;
-  height: 400px;
+  // height: 400px;
   padding-bottom: 0 !important;
+  padding-top: 0 !important;
   background: #333333;
   display: flex;
   flex-direction: column;
@@ -111,7 +123,7 @@ export default {
   height: 80px;
   background: #272727;
   justify-self: flex-end;
-  margin-top: 40px;
+  // margin-top: 40px;
 
   display: flex;
   flex-direction: row;
@@ -138,5 +150,23 @@ export default {
   .isPhone {
     display: inherit !important;
   }
+}
+
+.concat-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.concat-bar > img {
+  width: 90px;
+  height: 90px;
+}
+
+.concat-bar > .info {
+  flex-shrink: 0;
+  line-height: 1.5;
+  margin-left: 11px;
 }
 </style>

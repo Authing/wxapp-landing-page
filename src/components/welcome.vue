@@ -1,19 +1,19 @@
 <template>
   <div class="box box2 pages firstPage" id="welcome">
     <div>
-      <div class="h1 goLeft">「小登录」</div>
-      <div class="h1">微信小程序</div>
+      <div class="h1 margin-top">用户手机不插卡，也能认证他号码</div>
 
-      <div class="h3 margin-top">
-        扫一扫，
-        <mu-tooltip content="通过微信授权，跳过传统的手机号验证短信步骤。">
-          <span class="tips">免短信验证码</span>
-        </mu-tooltip>登录！
-      </div>
-      <div class="h3">快速建立标准化、企业级用户后台！</div>
-      <div class="h3">告别支付庞大短信费用，简化开发步骤！</div>
+      <div class="h3 margin-top">依托于微信官方的实名用户信息，</div>
+      <div class="h3">用户一键授权即可以真实号码完成注册/登录，</div>
+      <div class="h3">为开发者建立以手机号码为基础的账号体系。</div>
       <div class="redButton">
-        <mu-button large color="red" @click="readMore">了解更多</mu-button>
+        <mu-button large color="red" @click="handleConcat">联系销售</mu-button>
+        <a
+          target="_blank"
+          href="https://cdn.authing.cn/solutions/Authing%20%E5%8F%B7%E7%A0%81%E8%AE%A4%E8%AF%81%E4%BA%91%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E7%99%BD%E7%9A%AE%E4%B9%A6%20Number%20Identification%20Whitepaper.pdf"
+        >
+          <mu-button large color="white" style="margin-left: 11px;color: #222;">下载白皮书</mu-button>
+        </a>
       </div>
     </div>
 
@@ -24,11 +24,7 @@
     <mu-dialog title="登录成功，以下是您的个人信息" width="480" :open.sync="listShow">
       <mu-container>
         <mu-paper :z-depth="1">
-          <mu-data-table
-            :columns="columns"
-            :data="listData"
-            max-height="400"
-          >
+          <mu-data-table :columns="columns" :data="listData" max-height="400">
             <template slot-scope="scope">
               <td>{{scope.row.key}}</td>
               <td class="is-right">{{scope.row.value}}</td>
@@ -36,7 +32,11 @@
           </mu-data-table>
         </mu-paper>
       </mu-container>
-      <a target="_blank" href="https://docs.authing.cn/authing/scan-qrcode/wxapp-qrcode" slot="actions">
+      <a
+        target="_blank"
+        href="https://docs.authing.cn/authing/scan-qrcode/wxapp-qrcode"
+        slot="actions"
+      >
         <mu-button flat color="primary">查看接入文档</mu-button>
       </a>
       <mu-button slot="actions" flat color="primary" @click="showAlert()">关闭</mu-button>
@@ -52,7 +52,7 @@ const auth = new Authing({
   timestamp: Math.round(new Date() / 1000),
   nonce: Math.ceil(Math.random() * Math.pow(10, 6)),
   useSelfWxapp: true,
-  noSecurityChecking: true,
+  noSecurityChecking: true
 });
 localStorage.removeItem("qrcode");
 
@@ -76,46 +76,50 @@ export default {
     },
     showAlert() {
       this.listShow = !this.listShow;
+    },
+
+    handleConcat() {
+      EventBus.$emit("showconcat", {});
     }
   },
 
   mounted() {
     let that = this;
     //auth.then(function(authing) {
-      // 调用小程序扫码登录的方法，此方法将生成一个用于扫码登录的图片和相关提示信息
-      auth.startWXAppScaning({
-        mount: "qrcode-node",
-        tips: " ",
-        // 不自动跳转
-        redirect: false,
+    // 调用小程序扫码登录的方法，此方法将生成一个用于扫码登录的图片和相关提示信息
+    auth.startWXAppScaning({
+      mount: "qrcode-node",
+      tips: " ",
+      // 不自动跳转
+      redirect: false,
 
-        // 扫码成功
-        onSuccess(userInfo) {
-          let data = userInfo.data;
-          let arr = [];
-          for (var key in data) {
-            arr.push({
-              key: key,
-              value: data[key]
-            });
-          }
-          that.listData = arr;
-          console.log(arr);
-          that.listShow = true;
-          //alert(`扫码成功! \n 用户名：${userInfo.data.nickname} \n 登录IP：${userInfo.data.lastIP} \n `);
-          console.log(userInfo);
-
-          // 存储 token 到 localStorage 中
-          localStorage.setItem("token", userInfo.token);
-        },
-
-        onQRCodeLoad(qrcode) {
-          EventBus.$emit("getqrcode", {
-            qrcode: qrcode.qrcode
+      // 扫码成功
+      onSuccess(userInfo) {
+        let data = userInfo.data;
+        let arr = [];
+        for (var key in data) {
+          arr.push({
+            key: key,
+            value: data[key]
           });
-          localStorage.setItem("qrcode", qrcode.qrcode);
         }
-      });
+        that.listData = arr;
+        console.log(arr);
+        that.listShow = true;
+        //alert(`扫码成功! \n 用户名：${userInfo.data.nickname} \n 登录IP：${userInfo.data.lastIP} \n `);
+        console.log(userInfo);
+
+        // 存储 token 到 localStorage 中
+        localStorage.setItem("token", userInfo.token);
+      },
+
+      onQRCodeLoad(qrcode) {
+        EventBus.$emit("getqrcode", {
+          qrcode: qrcode.qrcode
+        });
+        localStorage.setItem("qrcode", qrcode.qrcode);
+      }
+    });
     //});
   }
 };
@@ -135,7 +139,7 @@ export default {
 }
 
 .goLeft {
-    transform: translate(-25px, 0px);
+  transform: translate(-25px, 0px);
 }
 
 @media screen and (max-width: 1024px) {
@@ -223,6 +227,10 @@ export default {
 }
 
 .redButton {
-  margin: 22px 0;
+  margin: 33px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 </style>

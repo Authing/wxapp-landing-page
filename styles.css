@@ -1,149 +1,150 @@
 #app {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .box {
-    box-sizing: border-box;
-    padding: 44px 144px;
+  box-sizing: border-box;
+  padding: 44px 144px;
 }
 
 .pages {
-    width: 100vw;
-    height: 90vh;
+  width: 100vw;
+  height: 90vh;
 }
 
 @media screen and (max-width: 1024px) {
-    .box {
-        box-sizing: border-box;
-        padding: 44px;
-    }
+  .box {
+    box-sizing: border-box;
+    padding: 44px;
+  }
 
-    div.h1 {
-        color: #ffffff;
-        font-size: 34px !important;
-        font-weight: bold;
-        line-height: 1.4;
-    }
+  div.h1 {
+    color: #ffffff;
+    font-size: 28px !important;
+    font-weight: bold;
+    line-height: 1.4;
+  }
 
-    div.h2 {
-        color: #ffffff;
-        font-size: 24px !important;
-        font-weight: bold;
-    }
-    
-    div.h3 {
-        color: #ffffff;
-        font-size: 18px !important;
-        font-weight: bold;
-    }
+  div.h2 {
+    color: #ffffff;
+    font-size: 24px !important;
+    font-weight: bold;
+  }
 
-    .titleBox, .titleBox2 {
-        font-size: 24px !important;
-    }
+  div.h3 {
+    color: #ffffff;
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+
+  .titleBox,
+  .titleBox2 {
+    font-size: 24px !important;
+  }
 }
 
 div.h1 {
-    color: #ffffff;
-    font-size: 44px;
-    font-weight: bold;
-    line-height: 1.4
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.4;
 }
 
 div.h2 {
-    color: #ffffff;
-    font-size: 34px;
-    font-weight: bold;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 div.h3 {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  font-weight: 600;
 }
 
 a.h3 {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: bold;
-    transition: all .5s
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.5s;
 }
 
-
-div, span {
-    cursor: default;
+div,
+span {
+  cursor: default;
 }
 
 .tips {
-    color: #fff1b6;
-    margin: 0 4px;
-    transition: all 3s;
+  color: #fff1b6;
+  margin: 0 -4px;
+  transition: all 3s;
 }
 
 .tips:hover {
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.788);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.788);
 }
 
 .titleBox {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 33px;
-    padding-top: 0;
-    font-size: 30px;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 33px;
+  padding-top: 0;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
 }
 
 .titleBox .line {
-    width: 80px;
-    height: 3px;
-    background: #f3f3f3;
-    margin-top: 4px;
+  width: 80px;
+  height: 3px;
+  background: #f3f3f3;
+  margin-top: 4px;
 }
 
 .titleBox2 {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 33px;
-    padding-top: 0;
-    font-size: 30px;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 33px;
+  padding-top: 0;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 .titleBox2 .line {
-    width: 80px;
-    height: 2px;
-    background: #f3f3f3c5;
-    margin-top: 4px;
+  width: 80px;
+  height: 2px;
+  background: #f3f3f3c5;
+  margin-top: 4px;
 }
 
 .isPC {
-    display: inherit;
+  display: inherit;
 }
-  
+
 .isPhone {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
-    .miniLink {
-      font-size: 9px !important;
-    }
-  
-    .isPC {
-      display: none !important;
-    }
-  
-    .isPhone {
-      display: inherit !important;
-    }
+  .miniLink {
+    font-size: 9px !important;
   }
+
+  .isPC {
+    display: none !important;
+  }
+
+  .isPhone {
+    display: inherit !important;
+  }
+}

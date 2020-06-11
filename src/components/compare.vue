@@ -5,7 +5,7 @@
       <div class="line"></div>
     </div>
     <div class="compareBox">
-      <div class="compareItem wow fadeInDown" data-wow-duration="0.8s">
+      <div class="compareItem wow fadeInDown" data-wow-duration="0.3s">
         <div class="icons">
           <svg
             t="1562234618497"
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="compareItem centerItem wow fadeInDown" data-wow-duration="1.2s">
+      <div class="compareItem centerItem wow fadeInDown" data-wow-duration="0.6s">
         <div class="icons">
           <svg
             t="1562234618497"
@@ -61,7 +61,7 @@
         </div>
       </div>
 
-      <div class="compareItem wow fadeInDown" data-wow-duration="1.6s">
+      <div class="compareItem wow fadeInDown" data-wow-duration="0.9s">
         <!--  -->
         <div class="icons">
           <svg
@@ -140,10 +140,10 @@ export default {
 .content {
   width: 100%;
   height: calc(100% - 80px - 24px);
-  font-size: 20px;
+  font-size: 18px;
   color: #9a9a9a;
-  margin-top: 24px;
-  line-height: 1.5;
+  margin-top: 44px;
+  line-height: 2;
   font-weight: 500;
   text-indent: 2em;
 }

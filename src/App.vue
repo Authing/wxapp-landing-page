@@ -23,6 +23,8 @@ body {
   /* font-family: "Avenir", Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB,
+    Heiti SC, WenQuanYi Micro Hei, sans-serif;
 }
 
 a[title="站长统计"] {
